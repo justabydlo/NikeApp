@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Главная";
+}
+
+<div id="bonfire" style="height:100%;width:100%;position:absolute;z-index:1000;background-color:black;height:100vh;width:100vw;">
+        <img class="img-fluid text-xl-center" src="~/img/nike.png" style="margin:10px auto 10px; left:0; top:40%; bottom:0; right:0;position:absolute;" />
+
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="img-wrap">
+            <img src="~/img/image 12.png"  />
+            <img src="~/img/nike.png"  style="width:120px;height:45px;position:absolute;top:30%;left:10px;"/>
+            <h1 style="position:absolute;top:40%;color:white;left:10px; font-size:40px;">
+                Приложение Nike
+                <br />
+                <br />
+                Члены клуба Nike
+                получают доступ <br />к
+                лучшим продуктам,
+                источникам
+                вдохновения
+                <br />
+                и историям из
+                мира спорта.
+            </h1>
+            <div class="row" style="position:absolute;top:80%;">
+                <a href="@Url.Action("Login", "Home")" style="margin-left:30px;" class="btn white-btn">Давай с нами</a>
+                <a href="@Url.Action("Login", "Home")"" style="margin-left:30px;" class="btn transparent-btn">Вход</a>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{ 
+<script type="text/javascript">
+    function LoadScreen() {
+        $('#bonfire').fadeOut(6000);
+    }
+    $(document).ready(function (e) {
+        LoadScreen();
+    });
+</script>
+}
